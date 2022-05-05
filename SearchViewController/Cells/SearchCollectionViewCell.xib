@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCell" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="iTunesSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="211" height="176"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-PL-6YZ">
+                        <rect key="frame" x="10" y="30" width="191" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1d-Ug-dIb">
+                        <rect key="frame" x="10" y="76" width="191" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="THZ-PL-6YZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="BNf-a1-tjg"/>
+                <constraint firstItem="THZ-PL-6YZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Dbw-Db-krG"/>
+                <constraint firstItem="i1d-Ug-dIb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="DeR-l0-apM"/>
+                <constraint firstAttribute="trailing" secondItem="i1d-Ug-dIb" secondAttribute="trailing" constant="10" id="EzO-tX-AAF"/>
+                <constraint firstItem="i1d-Ug-dIb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="NIE-9X-lRN"/>
+                <constraint firstAttribute="trailing" secondItem="THZ-PL-6YZ" secondAttribute="trailing" constant="10" id="XFe-Ru-nrG"/>
+                <constraint firstItem="i1d-Ug-dIb" firstAttribute="top" secondItem="THZ-PL-6YZ" secondAttribute="bottom" constant="10" id="heP-nt-vHN"/>
+                <constraint firstItem="THZ-PL-6YZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="qUK-k4-Hij"/>
+            </constraints>
+            <size key="customSize" width="211" height="176"/>
+            <connections>
+                <outlet property="artistTitleLabel" destination="i1d-Ug-dIb" id="QfN-5P-i2I"/>
+                <outlet property="songTitleLabel" destination="THZ-PL-6YZ" id="nb7-tJ-h3l"/>
+            </connections>
+            <point key="canvasLocation" x="254.34782608695653" y="99.776785714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>
