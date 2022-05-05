@@ -10,10 +10,10 @@ import Foundation
 
 struct ItunesSearchResponse: Codable {
     var resultCount: Int?
-    var results: [Items]?
+    var results: [Item]?
 }
 
-struct Items: Codable {
+struct Item: Codable {
     var wrapperType: String?
     var kind: String?
     var artistName: String?

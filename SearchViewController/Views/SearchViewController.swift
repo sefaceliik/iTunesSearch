@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     private var timer: Timer?
+    private var reuseIdentifier = "SearchCell"
     
     let viewModel: SearchViewModel
     
@@ -35,7 +36,7 @@ class SearchViewController: UIViewController {
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.register(UINib(nibName: "SearchCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchCell")
+        self.collectionView.register(UINib(nibName: "SearchCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.reuseIdentifier)
         self.collectionView.contentInsetAdjustmentBehavior = .never
         self.collectionView.isHidden = true
         
@@ -94,7 +95,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as! SearchCollectionViewCell
         
         let items = self.viewModel.getResultItems()
         cell.configure(model: items[indexPath.row])

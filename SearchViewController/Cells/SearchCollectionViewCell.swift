@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SearchCellConfigure: AnyObject {
-    func configure(model: Items)
+    func configure(model: Item)
 }
 
 class SearchCollectionViewCell: UICollectionViewCell {
@@ -25,7 +25,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 
 extension SearchCollectionViewCell: SearchCellConfigure {
 
-    func configure(model: Items) {
+    func configure(model: Item) {
         
         self.layer.borderColor = UIColor.black.withAlphaComponent(0.8).cgColor
         self.layer.borderWidth = 1

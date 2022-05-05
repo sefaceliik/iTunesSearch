@@ -49,7 +49,10 @@ class DetailViewController: UIViewController {
         self.releaseDateLabel.textColor = .black
         self.releaseDateLabel.text = self.viewModel.getReleaseDate()
         
-        guard let url = URL(string: self.viewModel.getImageUrl() ?? "") else { return }
+        guard let url = URL(string: self.viewModel.getImageUrl() ?? "") else {
+            self.artworkImageView.backgroundColor = .lightGray
+            return
+        }
         self.downloadImage(from: url)
     }
     

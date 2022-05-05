@@ -9,9 +9,9 @@ import Foundation
 
 class DetailViewModel {
     
-    private var model: Items?
+    private var model: Item?
     
-    public init(model: Items? = nil) {
+    public init(model: Item? = nil) {
         self.model = model
     }
     

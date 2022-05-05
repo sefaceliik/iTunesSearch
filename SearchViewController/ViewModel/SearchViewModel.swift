@@ -13,9 +13,7 @@ class SearchViewModel {
     private var pagingCount = 20
     var result: ItunesSearchResponse = ItunesSearchResponse()
     
-    public init() {
-        
-    }
+    public init() { }
    
     func getSearchResults(searchText: String, completion: (() -> Void)? = nil) {
         
@@ -34,7 +32,6 @@ class SearchViewModel {
                     let result = try decoder.decode(ItunesSearchResponse.self, from: data ?? Data() )
                     self.result = result
                     self.pagingCount = self.pagingCount + 20
-                    print(result.resultCount)
                     completion?()
                 } catch {
                     print(error.localizedDescription)
@@ -44,8 +41,8 @@ class SearchViewModel {
         task.resume()
     }
     
-    func getResultItems() -> [Items] {
-        return self.result.results ?? [Items]()
+    func getResultItems() -> [Item] {
+        return self.result.results ?? [Item]()
     }
     
     func getResultItemsCount() -> Int {
